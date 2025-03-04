@@ -9,9 +9,9 @@ import {
 import React from 'react'
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
 import { Button } from "./ui/button"
-import { signOutAction } from "@/app/actions/actions"
 import Link from "next/link"
 import { CookieIcon, LifeBuoyIcon, LogOutIcon, WalletCardsIcon } from "lucide-react"
+import { signOutAction } from "@/app/actions"
 
 export default function Drop({ avatar }: any) {
     return (

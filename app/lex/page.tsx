@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRightIcon, CircleDashedIcon } from "lucide-react";
 
 import Img from '@/assets/images/image.jpg'
-import Img1 from '@/assets/images/0IOrVXfffIw7k85h-generated_image.jpg'
+import Img1 from '@/assets/images/3840x2400 Resolution Pastel Slide Elevation Colorful Abstract UHD 4K 3840x2400 Resolution Wallpaper - Wallpapers Den.jpg'
 import Image from "next/image";
 import { Textarea } from "@/components/ui/textarea";
 

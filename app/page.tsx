@@ -1,16 +1,34 @@
-import Hero from "@/components/hero";
-import ConnectSupabaseSteps from "@/components/tutorial/connect-supabase-steps";
-import SignUpUserSteps from "@/components/tutorial/sign-up-user-steps";
-import { hasEnvVars } from "@/utils/supabase/check-env-vars";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, CircleDashedIcon } from "lucide-react";
+import { Textarea } from "@/components/ui/textarea";
 
-export default async function Home() {
+export default function HomeScreen() {
   return (
-    <>
-      <Hero />
-      <main className="flex-1 flex flex-col gap-6 px-4">
-        <h2 className="font-medium text-xl mb-4">Next steps</h2>
-        {hasEnvVars ? <SignUpUserSteps /> : <ConnectSupabaseSteps />}
-      </main>
-    </>
+    <div className="w-full">
+      <section className="flex flex-col items-center justify-start min-h-screen gap-10">
+        <h1 className="tracking-wider text-4xl md:text-3xl font-medium text-center">
+          What can I help you ship?
+        </h1>
+        <div className="flex flex-col w-full max-w-2xl items-center border p-2 rounded-3xl bg-neutral-100 placeholder:text-black dark:bg-secondary border-none">
+          <Textarea
+            placeholder="Tell us a little bit about Imegin"
+            className="border-0 block w-full resize-none shadow-none focus-visible:ring-offset-0 focus-visible:ring-0 md:text-lg tracking-normal bg-transparent placeholder:text-primary/40"
+          />
+          <div className="flex items-center w-full justify-between">
+            <div className="flex items-center gap-2 justify-between">
+              <Button type="submit" variant={"outline"} size={"icon"} className="rounded-full">
+                <CircleDashedIcon className="h-6 w-6" style={{ scale: "1.2" }} />
+              </Button>
+              <Button type="submit" variant={"outline"} size={"default"} className="rounded-full">
+                add style
+              </Button>
+            </div>
+            <Button type="submit" variant={"default"} size={"icon"} className="rounded-full w-auto h-auto p-2">
+              <ArrowRight className="h-6 w-6" style={{ scale: "1.2" }} />
+            </Button>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
